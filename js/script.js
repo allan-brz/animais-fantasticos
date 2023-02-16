@@ -1,4 +1,4 @@
-import initAccordion from './modules/accordion.js';
+import Accordion from './modules/accordion.js';
 import initAnimationScroll from './modules/animacao-scroll.js';
 import initDropDownMenu from './modules/dropdown-menu.js';
 import initModal from './modules/modal.js';
@@ -12,7 +12,9 @@ import initFetchBitcoin from './modules/fetch-bitcoin.js';
 const scrollSection = new ScrollSection(".js-menu a[href^='#'");
 scrollSection.init();
 
-initAccordion();
+const accordion = new Accordion("[data-anime='accordion'] dt");
+accordion.init();
+
 initAnimationScroll();
 initDropDownMenu();
 initModal();
