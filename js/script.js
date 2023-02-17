@@ -1,7 +1,7 @@
 import Accordion from './modules/accordion.js';
 import initAnimationScroll from './modules/animacao-scroll.js';
 import initDropDownMenu from './modules/dropdown-menu.js';
-import initModal from './modules/modal.js';
+import Modal from './modules/modal.js';
 import ScrollSection from './modules/scroll-suave.js';
 import TabMenu from './modules/tab-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
@@ -21,9 +21,16 @@ const tabNav = new TabMenu(
 );
 tabNav.init();
 
+const modal = new Modal(
+  "[data-modal='abrir']",
+  '[data-modal="fechar"]',
+  '[data-modal="container"]'
+);
+modal.init();
+
 initAnimationScroll();
 initDropDownMenu();
-initModal();
+
 initMenuMobile();
 initFuncionamento();
 initFetchAnimais();
