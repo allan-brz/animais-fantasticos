@@ -6,7 +6,7 @@ import ScrollSection from './modules/scroll-suave.js';
 import TabMenu from './modules/tab-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
-import initFetchAnimais from './modules/fetch-animais.js';
+import fetchAnimais from './modules/fetch-animais.js';
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
 
 const scrollSection = new ScrollSection(".js-menu a[href^='#'");
@@ -30,8 +30,7 @@ modal.init();
 
 initAnimationScroll();
 initDropDownMenu();
-
 initMenuMobile();
 initFuncionamento();
-initFetchAnimais();
+fetchAnimais('./animaisapi.json', '.numeros-grid');
 initFetchBitcoin();
