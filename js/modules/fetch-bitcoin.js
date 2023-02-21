@@ -9,5 +9,5 @@ export default function initFetchBitcoin(url, target) {
       console.log(erro);
     }
   }
-  fetchBitcoin(url);
+  return fetchBitcoin();
 }
