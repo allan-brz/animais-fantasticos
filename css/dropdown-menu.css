@@ -31,7 +31,7 @@
 }
 
 .dropdown::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -10px;
@@ -45,4 +45,11 @@
 .dropdown li a:hover {
   color: white;
   display: block;
+}
+
+@media (max-width: 700px) {
+  [data-dropdown] .dropdown {
+    display: block;
+    animation: show-up 0.3s forwards;
+  }
 }

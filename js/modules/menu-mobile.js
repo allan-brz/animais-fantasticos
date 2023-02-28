@@ -15,14 +15,13 @@ export default class MenuMobile {
     this.openMenu = this.openMenu.bind(this);
   }
 
-  openMenu() {
+  openMenu(event) {
+    event.preventDefault();
     this.menuList.classList.add('active');
     this.menuButton.classList.add('active');
-    console.log('teste');
     outsideClick(this.menuList, this.events, () => {
       this.menuList.classList.remove('active');
       this.menuButton.classList.remove('active');
-      console.log('teste');
     });
   }
 
